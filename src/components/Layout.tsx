@@ -148,7 +148,7 @@ const Layout = (/* Removed props */) => { // Removed props
 
       {/* Main Content */}
       <div className={cn(
-        "flex-1 transition-all duration-300 w-full",
+        "flex-1 transition-all duration-300 w-full p-6", // Added padding
         sidebarOpen ? "md:ml-64" : "md:ml-16" // Adjust margin for collapsed width
       )}>
         <Outlet /> {/* Render child routes here */}
