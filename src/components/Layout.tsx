@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"; // Added useEffect
+import { useState } from "react";
 import { Link, useLocation, Outlet } from "react-router-dom"; // Import Outlet
 import { Menu, FolderKanban, Users, SquareTerminal, ChevronDown, ChevronRight, PanelLeftClose, PanelRightClose } from "lucide-react"; // Added SquareTerminal, Chevrons, Panel Icons
 import { Button } from "@/components/ui/button";
@@ -14,16 +14,6 @@ const Layout = (/* Removed props */) => { // Removed props
   const { generatedApps } = useGeneratedAppContext();
   const location = useLocation(); // To determine active route
 
-  useEffect(() => {
-    const isGeneratedAppPage = location.pathname.startsWith('/generated-app/');
-    if (isGeneratedAppPage) {
-      setSidebarOpen(false); // Collapse sidebar on generated app pages
-    } else {
-      // For non-generated app pages, ensure sidebar is expanded by default.
-      // User can still manually toggle if a toggle mechanism exists for their viewport.
-      setSidebarOpen(true);
-    }
-  }, [location.pathname]);
 
   // Removed handleLegacyTabClick as it's no longer needed for routing
 
