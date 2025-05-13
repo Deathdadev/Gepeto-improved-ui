@@ -86,7 +86,7 @@ const ProjectForm = () => {
     if (formData.website) params.set("website", formData.website);
     if (formData.bitcoin) params.set("bitcoin", formData.bitcoin);
     
-    const scriptUrl = `http://localhost:42000/api/gepeto.git/start.js?${params.toString()}`;
+    const scriptUrl = `http://localhost:42000/api/Gepeto-improved/create.js?${params.toString()}`;
 
     addGeneratedApp({
       appName: formData.name,
