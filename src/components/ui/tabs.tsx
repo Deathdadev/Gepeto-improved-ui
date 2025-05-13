@@ -38,9 +38,11 @@ TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
 const TabsContent = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
->(({ className, ...props }, ref) => (
+// Removed forceMount from props type
+>(({ className, ...props }, ref) => ( // Removed forceMount from destructuring
   <TabsPrimitive.Content
     ref={ref}
+    // forceMount={forceMount} // Removed forceMount prop usage
     className={cn(
       "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
       className

@@ -7,19 +7,8 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
-    port: 5173, // Frontend dev server port
+    port: 5173,
     strictPort: true,
-    // Proxy configuration
-    proxy: {
-      // Proxy requests starting with /api to the backend server
-      '/api': {
-        target: 'http://localhost:3000', // Backend server address (matches backend/server.js)
-        changeOrigin: true, // Recommended for virtual hosted sites
-        secure: false, // Often needed when proxying to localhost HTTP from HTTPS dev server
-        // Optional: rewrite path if needed, but not necessary here
-        // rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-    },
   },
   plugins: [
     react(),

@@ -88,21 +88,21 @@ const ProfileSetup = () => {
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="x">X.com (Twitter)</Label>
+                <Label htmlFor="github">GitHub Username</Label>
                 <Input
-                  id="x"
-                  placeholder="Username (without @)"
-                  value={formData.x}
+                  id="github"
+                  placeholder="GitHub username"
+                  value={formData.github}
                   onChange={handleInputChange}
                 />
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="github">GitHub</Label>
+                <Label htmlFor="x">X.com (Twitter)</Label>
                 <Input
-                  id="github"
-                  placeholder="GitHub username"
-                  value={formData.github}
+                  id="x"
+                  placeholder="Username (without @)"
+                  value={formData.x}
                   onChange={handleInputChange}
                 />
               </div>
